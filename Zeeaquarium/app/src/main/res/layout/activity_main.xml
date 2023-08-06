@@ -1,0 +1,1072 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/screenshot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintDimensionRatio="1:1"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#a0a0a0"/>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/watertemperature_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:paddingTop="20dp"
+                        android:text="Watertemperatuur"
+                        android:textSize="16dp" />
+
+                    <com.github.anastr.speedviewlib.SpeedView
+                        android:id="@+id/watertemperature"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        app:sv_indicator="KiteIndicator"
+                        app:sv_indicatorWidth="8dp"
+                        app:sv_centerCircleRadius="12dp"
+                        app:sv_marksNumber="9"
+                        app:sv_markWidth="1dp"
+                        app:sv_maxSpeed="30"
+                        app:sv_minSpeed="20"
+                        app:sv_speedometerWidth="20dp"
+                        app:sv_speedTextSize="15dp"
+                        app:sv_textSize="8dp"
+                        app:sv_tickNumber="6"
+                        app:sv_unit="°C"
+                        app:sv_unitTextSize="15dp"
+                        app:sv_withTremble="false" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/light_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Licht"
+                        android:gravity="center"
+                        android:textSize="16dp"
+                        android:paddingTop="20dp"/>
+
+                    <com.github.anastr.speedviewlib.SpeedView
+                        android:id="@+id/light"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        app:sv_indicator="KiteIndicator"
+                        app:sv_indicatorWidth="8dp"
+                        app:sv_centerCircleRadius="12dp"
+                        app:sv_marksNumber="9"
+                        app:sv_markWidth="1dp"
+                        app:sv_maxSpeed="100"
+                        app:sv_minSpeed="0"
+                        app:sv_speedometerWidth="20dp"
+                        app:sv_speedTextSize="15dp"
+                        app:sv_textSize="8dp"
+                        app:sv_tickNumber="6"
+                        app:sv_unit="%"
+                        app:sv_unitTextSize="15dp"
+                        app:sv_withTremble="false" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#a0a0a0"/>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/watervolume_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Watervolume"
+                        android:gravity="center"
+                        android:textSize="16dp"
+                        android:paddingTop="20dp"/>
+
+                    <com.github.anastr.speedviewlib.SpeedView
+                        android:id="@+id/watervolume"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        app:sv_indicator="KiteIndicator"
+                        app:sv_indicatorWidth="8dp"
+                        app:sv_centerCircleRadius="12dp"
+                        app:sv_marksNumber="9"
+                        app:sv_markWidth="1dp"
+                        app:sv_maxSpeed="200"
+                        app:sv_minSpeed="150"
+                        app:sv_speedometerWidth="20dp"
+                        app:sv_speedTextSize="15dp"
+                        app:sv_textSize="8dp"
+                        app:sv_tickNumber="6"
+                        app:sv_unit="L"
+                        app:sv_unitTextSize="15dp"
+                        app:sv_withTremble="false" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/watervolume_reservoir_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Watervolume reservoir"
+                        android:gravity="center"
+                        android:textSize="16dp"
+                        android:paddingTop="20dp"/>
+
+                    <com.github.anastr.speedviewlib.SpeedView
+                        android:id="@+id/watervolume_reservoir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        app:sv_indicator="KiteIndicator"
+                        app:sv_indicatorWidth="8dp"
+                        app:sv_centerCircleRadius="12dp"
+                        app:sv_marksNumber="9"
+                        app:sv_markWidth="1dp"
+                        app:sv_maxSpeed="20"
+                        app:sv_minSpeed="0"
+                        app:sv_speedometerWidth="20dp"
+                        app:sv_speedTextSize="15dp"
+                        app:sv_textSize="8dp"
+                        app:sv_tickNumber="6"
+                        app:sv_unit="L"
+                        app:sv_unitTextSize="15dp"
+                        app:sv_withTremble="false" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#a0a0a0"/>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ambienttemperature_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Kamertemperatuur"
+                        android:gravity="center"
+                        android:textSize="16dp"
+                        android:paddingTop="20dp"/>
+
+                    <com.github.anastr.speedviewlib.SpeedView
+                        android:id="@+id/ambienttemperature"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        app:sv_indicator="KiteIndicator"
+                        app:sv_indicatorWidth="8dp"
+                        app:sv_centerCircleRadius="12dp"
+                        app:sv_marksNumber="9"
+                        app:sv_markWidth="1dp"
+                        app:sv_maxSpeed="35"
+                        app:sv_minSpeed="15"
+                        app:sv_speedometerWidth="20dp"
+                        app:sv_speedTextSize="15dp"
+                        app:sv_textSize="8dp"
+                        app:sv_tickNumber="6"
+                        app:sv_unit="°C"
+                        app:sv_unitTextSize="15dp"
+                        app:sv_withTremble="false" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/dosingpump_1_weight_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Doseerpomp 1 reservoir"
+                        android:gravity="center"
+                        android:textSize="16dp"
+                        android:paddingTop="20dp"/>
+
+                    <com.github.anastr.speedviewlib.SpeedView
+                        android:id="@+id/dosingpump_1_weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        app:sv_indicator="KiteIndicator"
+                        app:sv_indicatorWidth="8dp"
+                        app:sv_centerCircleRadius="12dp"
+                        app:sv_marksNumber="9"
+                        app:sv_markWidth="1dp"
+                        app:sv_maxSpeed="1000"
+                        app:sv_minSpeed="0"
+                        app:sv_speedometerWidth="20dp"
+                        app:sv_speedTextSize="15dp"
+                        app:sv_textSize="8dp"
+                        app:sv_tickNumber="6"
+                        app:sv_unit="mL"
+                        app:sv_unitTextSize="15dp"
+                        app:sv_withTremble="false" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#a0a0a0"/>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/dosingpump_2_weight_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Doseerpomp 2 reservoir"
+                        android:gravity="center"
+                        android:textSize="16dp"
+                        android:paddingTop="20dp"/>
+
+                    <com.github.anastr.speedviewlib.SpeedView
+                        android:id="@+id/dosingpump_2_weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        app:sv_indicator="KiteIndicator"
+                        app:sv_indicatorWidth="8dp"
+                        app:sv_centerCircleRadius="12dp"
+                        app:sv_marksNumber="9"
+                        app:sv_markWidth="1dp"
+                        app:sv_maxSpeed="1000"
+                        app:sv_minSpeed="0"
+                        app:sv_speedometerWidth="20dp"
+                        app:sv_speedTextSize="15dp"
+                        app:sv_textSize="8dp"
+                        app:sv_tickNumber="6"
+                        app:sv_unit="mL"
+                        app:sv_unitTextSize="15dp"
+                        app:sv_withTremble="false" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/dosingpump_3_weight_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Doseerpomp 3 reservoir"
+                        android:gravity="center"
+                        android:textSize="16dp"
+                        android:paddingTop="20dp"/>
+
+                    <com.github.anastr.speedviewlib.SpeedView
+                        android:id="@+id/dosingpump_3_weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        app:sv_indicator="KiteIndicator"
+                        app:sv_indicatorWidth="8dp"
+                        app:sv_centerCircleRadius="12dp"
+                        app:sv_marksNumber="9"
+                        app:sv_markWidth="1dp"
+                        app:sv_maxSpeed="1000"
+                        app:sv_minSpeed="0"
+                        app:sv_speedometerWidth="20dp"
+                        app:sv_speedTextSize="15dp"
+                        app:sv_textSize="8dp"
+                        app:sv_tickNumber="6"
+                        app:sv_unit="mL"
+                        app:sv_unitTextSize="15dp"
+                        app:sv_withTremble="false" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#a0a0a0"/>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingBottom="15dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp">
+
+                    <TextView
+                        android:id="@+id/pomp_l_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Pomp (L)"
+                        android:textSize="20dp" />
+
+                    <Switch
+                        android:id="@+id/pomp_l"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"/>
+
+                    <ProgressBar
+                        android:id="@+id/pomp_l_syncing"
+                        android:layout_height="34dp"
+                        android:visibility="invisible"/>
+
+                    <ImageView
+                        android:id="@+id/pomp_l_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="4dp"
+                        android:src="@drawable/grey_light" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp">
+
+                    <TextView
+                        android:id="@+id/pomp_rv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Pomp (RV)"
+                        android:textSize="20dp" />
+
+                    <Switch
+                        android:id="@+id/pomp_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"/>
+
+                    <ProgressBar
+                        android:id="@+id/pomp_rv_syncing"
+                        android:layout_height="34dp"
+                        android:visibility="invisible"/>
+
+                    <ImageView
+                        android:id="@+id/pomp_rv_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="4dp"
+                        android:src="@drawable/grey_light" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp">
+
+                    <TextView
+                        android:id="@+id/pomp_rab_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Pomp (RAB)"
+                        android:textSize="20dp" />
+
+                    <Switch
+                        android:id="@+id/pomp_rab"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"/>
+
+                    <ProgressBar
+                        android:id="@+id/pomp_rab_syncing"
+                        android:layout_height="34dp"
+                        android:visibility="invisible"/>
+
+                    <ImageView
+                        android:id="@+id/pomp_rab_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="4dp"
+                        android:src="@drawable/grey_light" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp">
+
+                    <TextView
+                        android:id="@+id/verlichting_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Verlichting"
+                        android:textSize="20dp" />
+
+                    <Switch
+                        android:id="@+id/verlichting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"/>
+
+                    <ProgressBar
+                        android:id="@+id/verlichting_syncing"
+                        android:layout_height="34dp"
+                        android:visibility="invisible"/>
+
+                    <ImageView
+                        android:id="@+id/verlichting_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="4dp"
+                        android:src="@drawable/grey_light" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp">
+
+                    <TextView
+                        android:id="@+id/verwarming_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Verwarming"
+                        android:textSize="20dp" />
+
+                    <Switch
+                        android:id="@+id/verwarming"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <ProgressBar
+                        android:id="@+id/verwarming_syncing"
+                        android:layout_height="34dp"
+                        android:visibility="invisible"/>
+
+                    <ImageView
+                        android:id="@+id/verwarming_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="4dp"
+                        android:src="@drawable/grey_light" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp">
+
+                    <TextView
+                        android:id="@+id/ventilatoren_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Ventilatoren"
+                        android:textSize="20dp" />
+
+                    <Switch
+                        android:id="@+id/ventilatoren"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <ProgressBar
+                        android:id="@+id/ventilatoren_syncing"
+                        android:layout_height="34dp"
+                        android:visibility="invisible"/>
+
+                    <ImageView
+                        android:id="@+id/ventilatoren_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="4dp"
+                        android:src="@drawable/grey_light" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp">
+
+                    <TextView
+                        android:id="@+id/ato_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Water bijvullen"
+                        android:textSize="20dp" />
+
+                    <Switch
+                        android:id="@+id/ato"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <ProgressBar
+                        android:id="@+id/ato_syncing"
+                        android:layout_height="34dp"
+                        android:visibility="invisible"/>
+
+                    <ImageView
+                        android:id="@+id/ato_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="4dp"
+                        android:src="@drawable/grey_light" />
+                </TableRow>
+            </TableLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#a0a0a0"/>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingBottom="15dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp">
+
+                    <TextView
+                        android:id="@+id/watervolume_setpoint_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Watervolume doel"
+                        android:textSize="20dp"
+                        android:layout_marginRight="20dp"/>
+
+                    <EditText
+                        android:id="@+id/watervolume_setpoint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="3"
+                        android:inputType="numberDecimal" />
+
+                    <ProgressBar
+                        android:id="@+id/watervolume_setpoint_syncing"
+                        android:layout_height="34dp"
+                        android:visibility="invisible"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/watervolume_timestamp1_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="ATO tijdstip 1"
+                        android:textSize="20dp"
+                        android:layout_marginRight="20dp"/>
+
+                    <EditText
+                        android:id="@+id/watervolume_timestamp1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="3"
+                        android:inputType="numberSigned" />
+
+                    <ProgressBar
+                        android:id="@+id/watervolume_timestamp1_syncing"
+                        android:layout_height="34dp"
+                        android:visibility="invisible"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/watervolume_timestamp2_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="ATO tijdstip 2"
+                        android:textSize="20dp"
+                        android:layout_marginRight="20dp"/>
+
+                    <EditText
+                        android:id="@+id/watervolume_timestamp2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="3"
+                        android:inputType="numberSigned" />
+
+                    <ProgressBar
+                        android:id="@+id/watervolume_timestamp2_syncing"
+                        android:layout_height="34dp"
+                        android:visibility="invisible"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/lighting_on_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Verlichting aan tijdstip"
+                        android:textSize="20dp"
+                        android:layout_marginRight="20dp"/>
+
+                    <EditText
+                        android:id="@+id/lighting_on_timestamp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="3"
+                        android:inputType="numberSigned" />
+
+                    <ProgressBar
+                        android:id="@+id/lighting_on_timestamp_syncing"
+                        android:layout_height="34dp"
+                        android:visibility="invisible"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/lighting_off_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Verlichting uit tijdstip"
+                        android:textSize="20dp"
+                        android:layout_marginRight="20dp"/>
+
+                    <EditText
+                        android:id="@+id/lighting_off_timestamp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="3"
+                        android:inputType="numberSigned" />
+
+                    <ProgressBar
+                        android:id="@+id/lighting_off_timestamp_syncing"
+                        android:layout_height="34dp"
+                        android:visibility="invisible"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/heating_threshold_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Verwarming drempel"
+                        android:textSize="20dp"
+                        android:layout_marginRight="20dp"/>
+
+                    <EditText
+                        android:id="@+id/heating_threshold_timestamp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="3"
+                        android:inputType="numberDecimal" />
+
+                    <ProgressBar
+                        android:id="@+id/heating_threshold_syncing"
+                        android:layout_height="34dp"
+                        android:visibility="invisible"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/fans_threshold_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Ventilatoren drempel"
+                        android:textSize="20dp"
+                        android:layout_marginRight="20dp"/>
+
+                    <EditText
+                        android:id="@+id/fans_threshold_timestamp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="3"
+                        android:inputType="numberDecimal" />
+
+                    <ProgressBar
+                        android:id="@+id/fans_threshold_syncing"
+                        android:layout_height="34dp"
+                        android:visibility="invisible"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/dosing_timestamp_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Doseren tijdstip"
+                        android:textSize="20dp"
+                        android:layout_marginRight="20dp"/>
+
+                    <EditText
+                        android:id="@+id/dosing_timestamp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="3"
+                        android:inputType="numberSigned" />
+
+                    <ProgressBar
+                        android:id="@+id/dosing_timestamp_syncing"
+                        android:layout_height="34dp"
+                        android:visibility="invisible"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/dosingpump_1_volume_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Doseerpomp 1 volume"
+                        android:textSize="20dp"
+                        android:layout_marginRight="20dp"/>
+
+                    <EditText
+                        android:id="@+id/dosingpump_1_volume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="3"
+                        android:inputType="numberDecimal" />
+
+                    <ProgressBar
+                        android:id="@+id/dosingpump_1_volume_syncing"
+                        android:layout_height="34dp"
+                        android:visibility="invisible"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/dosingpump_2_volume_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Doseerpomp 2 volume"
+                        android:textSize="20dp"
+                        android:layout_marginRight="20dp"/>
+
+                    <EditText
+                        android:id="@+id/dosingpump_2_volume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="3"
+                        android:inputType="numberDecimal" />
+
+                    <ProgressBar
+                        android:id="@+id/dosingpump_2_volume_syncing"
+                        android:layout_height="34dp"
+                        android:visibility="invisible"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/dosingpump_3_volume_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Doseerpomp 3 volume"
+                        android:textSize="20dp"
+                        android:layout_marginRight="20dp"/>
+
+                    <EditText
+                        android:id="@+id/dosingpump_3_volume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="3"
+                        android:inputType="numberDecimal" />
+
+                    <ProgressBar
+                        android:id="@+id/dosingpump_3_volume_syncing"
+                        android:layout_height="34dp"
+                        android:visibility="invisible"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/dosingpump_4_volume_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Doseerpomp 4 volume"
+                        android:textSize="20dp"
+                        android:layout_marginRight="20dp"/>
+
+                    <EditText
+                        android:id="@+id/dosingpump_4_volume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="3"
+                        android:inputType="numberDecimal" />
+
+                    <ProgressBar
+                        android:id="@+id/dosingpump_4_volume_syncing"
+                        android:layout_height="34dp"
+                        android:visibility="invisible"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/dosingpump_1_initial_weight_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Doseerpomp 1 init vol."
+                        android:textSize="20dp"
+                        android:layout_marginRight="20dp"/>
+
+                    <EditText
+                        android:id="@+id/dosingpump_1_initial_weight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="3"
+                        android:inputType="numberDecimal" />
+
+                    <ProgressBar
+                        android:id="@+id/dosingpump_1_initial_weight_syncing"
+                        android:layout_height="34dp"
+                        android:visibility="invisible"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/dosingpump_2_initial_weight_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Doseerpomp 2 init vol."
+                        android:textSize="20dp"
+                        android:layout_marginRight="20dp"/>
+
+                    <EditText
+                        android:id="@+id/dosingpump_2_initial_weight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="3"
+                        android:inputType="numberDecimal" />
+
+                    <ProgressBar
+                        android:id="@+id/dosingpump_2_initial_weight_syncing"
+                        android:layout_height="34dp"
+                        android:visibility="invisible"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/dosingpump_3_initial_weight_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Doseerpomp 3 init vol."
+                        android:textSize="20dp"
+                        android:layout_marginRight="20dp"/>
+
+                    <EditText
+                        android:id="@+id/dosingpump_3_initial_weight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="3"
+                        android:inputType="numberDecimal" />
+
+                    <ProgressBar
+                        android:id="@+id/dosingpump_3_initial_weight_syncing"
+                        android:layout_height="34dp"
+                        android:visibility="invisible"/>
+
+                </TableRow>
+            </TableLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#a0a0a0"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/reboot_button"
+                    android:text="Controller Herstarten"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></Button>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

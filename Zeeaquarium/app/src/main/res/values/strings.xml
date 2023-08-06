@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Zeeaquarium</string>
+    <string name="signalr_url">https://zeeaquarium-streamingapp.azurewebsites.net/</string>
+    <string name="token">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJ1c2VyIiwiZXhwIjoxNzIyODY4ODgwLCJpc3MiOiJodHRwczovL3plZWFxdWFyaXVtLXN0cmVhbWluZ2h1Yi5henVyZXdlYnNpdGVzLm5ldCIsImF1ZCI6Imh0dHBzOi8vemVlYXF1YXJpdW0tc3RyZWFtaW5naHViLmF6dXJld2Vic2l0ZXMubmV0In0.UwKXsmqxCjdEIt5s_WKxm3bSQhEAFSbIBkv1bjAPXdo</string>
+    <string name="notification_hub_name">zeeaquarium-notification-hub</string>
+    <string name="notification_hub_connection_string">Endpoint=sb://zeeaquarium-notification-hubs.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=eGtcjM3aHnMKldrg4MH1Nc5SPcq2tVviidlZ8mwqJIg=</string>
+</resources>

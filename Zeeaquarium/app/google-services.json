@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "949250433688",
+    "project_id": "zeeaquarium-notifications",
+    "storage_bucket": "zeeaquarium-notifications.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:949250433688:android:37d400a9e26e619f2c26ed",
+        "android_client_info": {
+          "package_name": "com.example.zeeaquarium"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "949250433688-2a4rvmog2ciod2j63jvug4llecm9eala.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEyTC9DmB_lsmQ2fnzNEXfHsnX4Q58Ozk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "949250433688-2a4rvmog2ciod2j63jvug4llecm9eala.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
